@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Fraunces', serif;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+.containar {
+    background-color: hsl(30, 38%, 92%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    max-width: 535px;
+    display: flex;
+    border-radius: 10px;
+}
+@media (max-width: 550px) {
+    .card {
+        flex-direction: column;
+        max-width: 360px;
+        height: 85vh;
+    }
+
+}
+
+.card .img {
+    flex: 1.3;
+    background-image: url(../imges/image-product-desktop.jpg);
+    background-size:cover;
+    border-radius: 15PX 0 0 15PX;
+    height: 410px;
+}
+@media (max-width: 550px){
+    .card .img {
+        background-image: url(../imges/image-product-mobile.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 200px;
+        border-radius: 15px 15px 0 0;
+        flex: none;
+    }
+}
+    
+
+.card .content {
+    padding: 30px;
+    background-color: white;
+    border-radius: 0 15PX 15PX 0;
+    position: relative;
+    flex: 1;
+}
+@media (max-width: 550px){
+    .content {
+        width: 100%;
+        height: 200px;
+        border-radius: 0 0 15PX 15px;
+        flex: none;
+    }
+}
+.content > p:first-child {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+
+}
+.content h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+.content > p:nth-of-type(2) {
+    color: hsl(228, 12%, 48%);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.content .peries {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+.content .peries .bold {
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+.content .peries > span:last-child {
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+    text-decoration:line-through ;
+    position: relative;
+    left: -17px;
+}
+.content a {
+    display: flex;
+    justify-content: CENTER ;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 60px);
+    height: 40px;
+    color: white;
+    background-color:hsl(158, 36%, 37%) ;
+    text-decoration: none;
+    cursor:pointer;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: .3s ;
+}
+.content a:hover {
+    background-color: hsl(158deg 26% 26%);
+}
+.content a i {
+    margin-right: 15px;
+    font-weight: 900;
+}
